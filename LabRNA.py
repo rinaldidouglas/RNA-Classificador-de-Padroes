@@ -30,9 +30,9 @@ pca_features = pca.transform(features)
 print('Mantida %5.2f%% da informação do conjunto inicial de dados'%(sum(pca.explained_variance_ratio_)*100))
 
 plt.subplot(2, 2, 2)
-plt.scatter(pca_features[:,0], pca_features[:,1], c=target, marker = 'o',cmap = 'viridis')
+plt.scatter(pca_features[:,0], pca_features[:,1], c = target, marker = 'o',cmap = 'viridis')
 
-Classificador = MLPClassifier(hidden_layer_sizes = (15, 10), alpha=1, max_iter = 1000)
+Classificador = MLPClassifier(hidden_layer_sizes = (15, 10), alpha = 1, max_iter = 1000)
 Classificador.fit(features,target)
 
 predicao = Classificador.predict(features)
